@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+echo "husky: commit"
+#用来去检测你的commit message是否符合规范
+npx commitlint --edit "$1" || exit 1
+# 这里的 $1 是传入的参数，表示 commit message 的文件路径
