@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "lint:es": "eslint \"{packages,play}/**/*.{js,jsx,ts,tsx}\"",
-    "lint:style": "stylelint \"{packages,play}/**/*.{css,ts}\"",
+    "lint:style": "stylelint \"packages/**/*.css\" && stylelint \"play/**/*.css\"",
     "lint": "pnpm lint:es && pnpm lint:style",
     "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|play)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
     "prepare": "husky",
