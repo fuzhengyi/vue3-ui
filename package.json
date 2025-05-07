@@ -25,7 +25,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "fast-glob": "^3.3.3",
     "globals": "16.0.0",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "15.5.2",
     "prettier": "3.5.3",
     "stylelint": "16.19.1",
     "stylelint-config-standard": "38.0.0",
@@ -45,5 +45,18 @@
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "pnpm spellcheck"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "pnpm spellcheck"
+    ],
+    "*.{html,md}": [
+      "prettier --write"
+    ]
   }
 }

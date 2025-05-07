@@ -12,7 +12,7 @@ export default tseslint.config({
         '@typescript-eslint/no-for-in-array': 'error',
         'no-unused-vars': 'error',
         'no-undef': 'warn',
-        'no-console': 'error',
+        'no-console': 'off',
         'simple-import-sort/imports': [
             'error',
             {

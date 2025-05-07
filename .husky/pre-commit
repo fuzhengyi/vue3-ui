@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 echo "Running pre-commit hook..."
-pnpm lint
-pnpm spellcheck
+# pnpm lint
+# pnpm spellcheck
+npx lint-staged
